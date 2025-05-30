@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed:
   - Client ID
   - Client Secret
   - Website URL: `http://localhost:8888`
-  - Redirect URI: `http://127.0.0.1:8888/callback`
+  - Redirect URI: `https://app.clio.com/oauth/approval`
 
 ## Setup
 
@@ -64,14 +64,14 @@ Obtain your Client ID and Client Secret from your Clio developer portal:
 
 1. Create an application in your Clio developer account
 2. Set the Website URL to `http://localhost:8888`
-3. Configure the Redirect URI to be `http://127.0.0.1:8888/callback`
+3. Configure the Redirect URI to be `https://app.clio.com/oauth/approval`
 4. Store your credentials securely using one of these methods:
    - Environment variables
    - `appsettings.json` (ensure it's in `.gitignore`)
    - User Secrets for development
    - DPAPI secure storage (implemented in `DpapiSecureStorage.cs`)
 
-> ⚠️ **Security Warning**: Never hardcode sensitive credentials in source code files.
+> ⚠️ **Security Warning**: Don't hardcode sensitive credentials in source code files.
 
 ## Running the Application
 
@@ -101,7 +101,7 @@ dotnet run
 
    - Enter your Clio Client ID into [appsettings.json] in their respective values
    - Enter your Client Secret into [appsettings.json] in their respective values
-   - Verify the Redirect URI is set to `http://127.0.0.1:8888/callback`
+   - Verify the Redirect URI is set to `https://app.clio.com/oauth/approval` for desktop apps
    - Click the "Authenticate" button
    - Your browser will open to authenticate with Clio
    - Authorize the application when prompted
